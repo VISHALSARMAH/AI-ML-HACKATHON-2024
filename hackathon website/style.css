@@ -1,0 +1,353 @@
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #364BBC; /* Updated background color */
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+/* Logo styling with hover effects */
+.ztech-logo {
+    max-height: 50px;
+    margin-right: 30px; /* Added margin to create gap */
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)); /* Subtle white shadow for visibility */
+}
+
+/* Add hover effect to the logo */
+.ztech-logo:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)); /* Enhanced shadow on hover */
+}
+
+/* Flex properties for the list */
+.flex.items {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2px;
+}
+
+/* Flex properties for the list items */
+.flex.items li {
+    margin-right: 20px;
+}
+
+/* Remove underline from anchor tags */
+.flex.items a {
+    text-decoration: none;
+    color: #ffffff; /* White color for text to stand out against dark background */
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+/* Add underline and text-shadow on hover */
+.flex.items a:hover {
+    color: #a8c0e0; /* Light blue color for hover effect */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    letter-spacing: 1px; /* Slightly increased letter spacing on hover */
+    cursor: pointer;
+}
+
+/* Styling for the search container */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the search bar to the right */
+}
+
+/* Styling for the search bar */
+.search-bar {
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: #fff; /* White background for search bar */
+    color: #333;
+    transition: width 0.4s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    outline: none;
+    padding-right: 40px; /* Space for the search icon */
+}
+
+/* Expanded search bar on hover and focus */
+.search-bar:focus,
+.search-bar:hover {
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: #f9f9f9; /* Slightly darker background on hover */
+}
+
+/* Styling for the search icon */
+.search-icon {
+    position: absolute;
+    right: 15px; /* Adjusted position */
+    width: 24px; /* Increased size */
+    height: 24px; /* Increased size */
+    color: #333; /* Dark color for icon */
+    transition: color 0.3s ease;
+}
+
+/* Change color on hover */
+.search-bar:focus + .search-icon,
+.search-bar:hover + .search-icon {
+    color: #007BFF; /* Change icon color on hover */
+}
+
+/* Styling for the card and box1 */
+.card {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for the card */
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    background-color: #f9f9f9; /* Slightly darker background on hover */
+}
+
+/* Flex properties for the box1 */
+.box1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Box item styling with hover effects */
+.box-item {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff; /* White background */
+}
+
+/* Increased size for SVG icons */
+.box-item img {
+    width: 80px; /* Increased size */
+    height: 80px; /* Increased size */
+    transition: transform 0.3s ease;
+}
+
+/* Add hover effect to box items */
+.box-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    background-color: #f0f8ff; /* Light blue background on hover */
+}
+
+/* Styling for box item text */
+.box-item p {
+    margin: 0;
+    font-size: 16px; /* Slightly larger font size */
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .flex.items {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .flex.items li {
+        margin-bottom: 10px;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+        padding-right: 50px; /* Adjust for larger screen width */
+    }
+
+    .search-icon {
+        right: 10px; /* Adjusted position for smaller screens */
+        width: 20px; /* Adjusted size for smaller screens */
+        height: 20px; /* Adjusted size for smaller screens */
+    }
+}
+
+.card-title {
+    margin: 16px 25px;
+    font-size: 24px; /* Larger font size for card title */
+    color: #007BFF; /* Blue color for the card title */
+    font-family: sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background: RGB(54, 75, 188);
+    color: #fff;
+    height: auto;
+    width: 100%;
+    text-align: left;
+    padding-top: 40px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 50px;
+}
+
+.footer .footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer .logo-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.footer .about p {
+    color: #bbb;
+}
+
+.footer .contact span {
+    display: block;
+    margin: 5px 0;
+}
+
+.footer .socials a {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.footer .socials a:hover {
+    background: #fff;
+    color: #333;
+}
+
+.footer .links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .links ul a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 0 10px 0;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer .links ul a:hover {
+    color: #aaa;
+}
+
+.footer .contact-form .contact-input {
+    background: #fffefe;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer .contact-form .contact-btn {
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer .contact-form .contact-btn:hover {
+    background: RGB(54, 75, 188);
+}
+
+.footer-bottom {
+    background: #222;
+    color: #fff;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.footer .logo-text span {
+    color: #ff6f61;
+}
+
+.footer .socials i, .footer .contact-btn i {
+    margin-right: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer .footer-section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.footer .socials a {
+    animation: fadeIn 1s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.footer .socials a:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.footer .socials a:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.footer .socials a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+

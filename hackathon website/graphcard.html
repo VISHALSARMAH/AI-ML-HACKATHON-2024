@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Graphs</title>
+    <link rel="stylesheet" href="graphs.css">
+    <style>
+        #chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            width: 300px;
+        }
+
+        #chat-widget button {
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+        }
+
+        #chat-widget button:hover {
+            background-color: #0056b3;
+        }
+
+        #chat-box {
+            display: none;
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+            width: 100%;
+            max-height: 400px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #chat-box .header {
+            background-color: #007BFF;
+            color: #ffffff;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #chat-box .messages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        #chat-box .message {
+            margin-bottom: 10px;
+        }
+
+        #chat-box .message.bot {
+            color: #007BFF;
+        }
+
+        #chat-box .message.user {
+            color: #333333;
+            text-align: right;
+        }
+
+        #chat-box .input-container {
+            border-top: 1px solid #ddd;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #chat-box .input-container input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #chat-box .input-container button {
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        #chat-box .input-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Patient Graphs</h1>
+    </header>
+    <main>
+        <section class="graph-section">
+            <!-- Graph Card 1 -->
+            <div class="graph-card">
+                <div class="graph-info">
+                    <p><strong>Name:</strong> Monu</p>
+                    <p><strong>Age:</strong> 27</p>
+                    <p><strong>Gender:</strong> Male</p>
+                    <p><strong>Patient ID:</strong> 001</p>
+                    <p><strong>Disease:</strong> Hypertension</p>
+                </div>
+                <div class="graph-container">
+                    <img src="ecg_graph.jpg" alt="Graph 1" class="graph-img">
+                    <img src="norm.png" alt="Graph 2" class="graph-img">
+                </div>
+                <button class="chat-button" onclick="toggleChat()">Chat with Us</button>
+            </div>
+
+            <!-- Continue for remaining patients up to 10 -->
+
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Our Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget">
+       
+        <div id="chat-box">
+            <div class="header">Chat with us</div>
+            <div class="messages" id="messages">
+                <div class="message bot">Hello! How can I help you today?</div>
+            </div>
+            <div class="input-container">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            var chatBox = document.getElementById('chat-box');
+            var isChatVisible = chatBox.style.display === 'block';
+            chatBox.style.display = isChatVisible ? 'none' : 'block';
+        }
+
+        function sendMessage() {
+            var messageInput = document.getElementById('message-input');
+            var messages = document.getElementById('messages');
+
+            // Get the user's message
+            var userMessage = messageInput.value.trim();
+            if (userMessage === '') return; // Do nothing if input is empty
+
+            // Create a new message element
+            var userMessageElement = document.createElement('div');
+            userMessageElement.className = 'message user';
+            userMessageElement.textContent = userMessage;
+
+            // Append the user's message to the messages container
+            messages.appendChild(userMessageElement);
+
+            // Clear the input field
+            messageInput.value = '';
+
+            // Simulate a bot response
+            setTimeout(() => {
+                var botMessageElement = document.createElement('div');
+                botMessageElement.className = 'message bot';
+                botMessageElement.textContent = 'Thank you for your message!';
+                
+                messages.appendChild(botMessageElement);
+
+                // Add follow-up message
+                setTimeout(() => {
+                    var followUpMessageElement = document.createElement('div');
+                    followUpMessageElement.className = 'message bot';
+                    followUpMessageElement.textContent = 'A doctor will contact you soon.';
+                    
+                    messages.appendChild(followUpMessageElement);
+
+                    // Scroll to the bottom of the messages container
+                    messages.scrollTop = messages.scrollHeight;
+                }, 1000);
+
+                // Scroll to the bottom of the messages container
+                messages.scrollTop = messages.scrollHeight;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

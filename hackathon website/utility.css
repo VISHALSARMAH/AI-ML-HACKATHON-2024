@@ -1,0 +1,140 @@
+/* Card Container Styling */
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    gap: 20px; /* Space between cards */
+}
+
+.card2 {
+    flex: 0 0 auto; /* Prevent cards from shrinking */
+    width: 200px; /* Set width for each card */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    padding: 15px;
+}
+
+/* Hover effect for the cards */
+.card2:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    background-color: #f9f9f9;
+}
+
+/* Box2 Styling */
+.box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+/* Styling for box sections (one and two) */
+.box2 .one, 
+.box2 .two {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Increased size for SVG icons */
+.box2 img {
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
+    transition: transform 0.3s ease;
+}
+
+/* Adjust font size and family */
+.box2 p {
+    margin: 0;
+    font-size: 14px; /* Adjusted size */
+    color: #333;
+    font-family: 'San Serif', sans-serif;
+}
+
+/* Bold styling for male names */
+.box2 .data p:nth-child(2) {
+    font-weight: bold;
+    font-family: 'San Serif', sans-serif;
+}
+
+/* Adjust font size for name and age */
+.box2 .data p {
+    font-size: 16px; /* Larger font size for name */
+}
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'San Serif', sans-serif;
+}
+
+/* Booking Form Container */
+.booking-form-container {
+    background-image: url('hospital-background.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Booking Form Styling */
+.booking-form {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #333;
+}
+
+/* Form Label and Select Styling */
+.booking-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.booking-form select,
+.booking-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit Button Styling */
+.booking-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #0056b3;
+}
+.margin{
+    margin: 10px;
+}
+.im{
+    border-radius: 5px;
+}

@@ -1,0 +1,138 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro, .team, .contact {
+    margin-bottom: 40px;
+}
+
+.intro h2, .team h2, .contact h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.intro p, .team p, .contact p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.team-member {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 800px; /* Adjusted width to increase card size */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-img {
+    width: 150px; /* Increased size for better visuals */
+    height: 150px; /* Increased size for better visuals */
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.team-info {
+    flex: 1;
+}
+
+.team-info h3 {
+    margin-top: 0;
+    font-size: 1.7em;
+    color: #3498db;
+}
+
+.team-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.2em;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px; /* Ensures there is space below the paragraph */
+}
+
+.contact a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    
+    width: 100%;
+    bottom: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
